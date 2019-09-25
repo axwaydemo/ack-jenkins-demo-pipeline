@@ -19,7 +19,7 @@ pipeline{
         stage('Deploy'){
           steps{
               container("kubectl") {
-                  sh "kubectl apply -f deployment.yaml"
+                  sh "kubectl -n default apply -f deployment.yaml"
               }
           }
         }
