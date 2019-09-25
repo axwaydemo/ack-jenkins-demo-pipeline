@@ -11,7 +11,7 @@ pipeline{
         // 定义第一个stage， 完成克隆源码的任务, 示例项目中包含用于本次构建的编排文件Jenkinsfile 和 应用部署文件deployment.yaml
         stage('Git'){
           steps{
-            git branch: '${BRANCH}', credentialsId: '', url: 'https://github.com/haoshuwei/ack-jenkins-demo-pipeline.git'
+            git branch: 'master', credentialsId: '', url: 'https://github.com/haoshuwei/ack-jenkins-demo-pipeline.git'
           }
         }
 
